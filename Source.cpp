@@ -8,7 +8,7 @@ public:
 	bool set_num1(double num1) {
 		double num = num1;
 		if (num == 0) {
-			std::cout << "Неверный ввод!" << std::endl;
+	//		std::cout << "Неверный ввод!" << std::endl;
 			return false;
 		}
 		else {
@@ -22,7 +22,7 @@ public:
 	bool set_num2(double num2) {
 		double num = num2;
 		if (num == 0) {
-			std::cout << "Неверный ввод!" << std::endl;
+	//		std::cout << "Неверный ввод!" << std::endl;
 			return false;
 		}
 		else {
@@ -46,12 +46,31 @@ protected:
 int main() {
 	setlocale(LC_ALL, "ru_RU");
 	Calc Calculator;
-	double num1, num2;
+	double num1{}, num2{};
+
 	while (true) { 
-		std::cout << "‚ведите num1: ";
-		std::cin >> num1;
-		std::cout << "‚ведите num2: ";
-		std::cin >> num2;
+		bool end = false;
+		while (!Calculator.set_num1(num1) || !end) {
+			std::cout << "Введите num1: ";
+			std::cin >> num1;
+			if (!Calculator.set_num1(num1)) {
+				std::cout << "Неверный ввод!" << std::endl;
+			}
+			else {
+				break;
+			}
+		}
+		while (!Calculator.set_num2(num2) || !end) {
+			std::cout << "Введите num2: ";
+			std::cin >> num2;
+			if (!Calculator.set_num2(num2)) {
+				std::cout << "Неверный ввод!" << std::endl;
+			}
+			else {
+				break;
+			}
+		}
+		
 		if(Calculator.set_num1(num1) && Calculator.set_num2(num2)) {
 				std::cout << "num1 + num2 = " << Calculator.add() << std::endl;
 				std::cout << "num1 * num2 = " << Calculator.multiply() << std::endl;
@@ -59,6 +78,7 @@ int main() {
 				std::cout << "num2 - num1 = " << Calculator.subtract_2_1() << std::endl;
 				std::cout << "num1 / num2 = " << Calculator.divide_1_2() << std::endl;
 				std::cout << "num2 / num1 = " << Calculator.divide_2_1() << std::endl;
+				end = true;
 		}
 	}
 	return 0;
