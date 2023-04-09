@@ -8,7 +8,7 @@ public:
 	bool set_num1(double num1) {
 		double num = num1;
 		if (num == 0) {
-			std::cout << "Ќеверный ввод!" << std::endl;
+			std::cout << "Неверный ввод!" << std::endl;
 			return false;
 		}
 		else {
@@ -22,7 +22,7 @@ public:
 	bool set_num2(double num2) {
 		double num = num2;
 		if (num == 0) {
-			std::cout << "Ќеверный ввод!" << std::endl;
+			std::cout << "Неверный ввод!" << std::endl;
 			return false;
 		}
 		else {
