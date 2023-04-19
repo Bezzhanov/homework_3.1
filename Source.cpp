@@ -1,14 +1,14 @@
-#include <iostream>
+п»ї#include <iostream>
 
 class Calc {
 public:
-	//-метод должен установить значение поля num1 равное значению аргумента num1 в случае, 
-	// если значение аргумента не равно 0. 
-	//Возвращает true, если установка произошла успешно, в обратном случае false
+	//-РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ num1 СЂР°РІРЅРѕРµ Р·РЅР°С‡РµРЅРёСЋ Р°СЂРіСѓРјРµРЅС‚Р° num1 РІ СЃР»СѓС‡Р°Рµ, 
+	// РµСЃР»Рё Р·РЅР°С‡РµРЅРёРµ Р°СЂРіСѓРјРµРЅС‚Р° РЅРµ СЂР°РІРЅРѕ 0. 
+	//Р’РѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё СѓСЃС‚Р°РЅРѕРІРєР° РїСЂРѕРёР·РѕС€Р»Р° СѓСЃРїРµС€РЅРѕ, РІ РѕР±СЂР°С‚РЅРѕРј СЃР»СѓС‡Р°Рµ false
 	bool set_num1(double num1) {
 		double num = num1;
 		if (num == 0) {
-	//		std::cout << "Неверный ввод!" << std::endl;
+	//		std::cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ!" << std::endl;
 			return false;
 		}
 		else {
@@ -16,13 +16,13 @@ public:
 			return true;
 		}
 	};
-	//-метод должен установить значение поля num2 равное значению аргумента num2 в случае, 
-	//если значение аргумента не равно 0. 
-	//Возвращает true, если установка произошла успешно, в обратном случае false
+	//-РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ num2 СЂР°РІРЅРѕРµ Р·РЅР°С‡РµРЅРёСЋ Р°СЂРіСѓРјРµРЅС‚Р° num2 РІ СЃР»СѓС‡Р°Рµ, 
+	//РµСЃР»Рё Р·РЅР°С‡РµРЅРёРµ Р°СЂРіСѓРјРµРЅС‚Р° РЅРµ СЂР°РІРЅРѕ 0. 
+	//Р’РѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё СѓСЃС‚Р°РЅРѕРІРєР° РїСЂРѕРёР·РѕС€Р»Р° СѓСЃРїРµС€РЅРѕ, РІ РѕР±СЂР°С‚РЅРѕРј СЃР»СѓС‡Р°Рµ false
 	bool set_num2(double num2) {
 		double num = num2;
 		if (num == 0) {
-	//		std::cout << "Неверный ввод!" << std::endl;
+	//		std::cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ!" << std::endl;
 			return false;
 		}
 		else {
@@ -30,12 +30,12 @@ public:
 			return true;
 		}
 	};
-	double add() { 	return this->num1 + this->num2; }; //- метод должен возвращать результат сложения num1 и num2
-	double multiply() { return this->num1 * this->num2; }; //-метод должен возвращать результат перемножения num1 и num2
-	double subtract_1_2() { return this->num2 - this->num1; }; //-метод должен возвращать результат вычитания num2 из num1
-	double subtract_2_1() { return this->num1 - this->num2; }; //-метод должен возвращать результат вычитания num1 из num2
-	double divide_1_2() { return this->num1 / this->num2; }; //-метод должен возвращать результат деления num1 на num2
-	double divide_2_1() { return this->num2 / this->num1; }; //-метод должен возвращать результат деления num2 на num1
+	double add() { 	return this->num1 + this->num2; }; //- РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ СЃР»РѕР¶РµРЅРёСЏ num1 Рё num2
+	double multiply() { return this->num1 * this->num2; }; //-РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РїРµСЂРµРјРЅРѕР¶РµРЅРёСЏ num1 Рё num2
+	double subtract_1_2() { return this->num2 - this->num1; }; //-РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ num2 РёР· num1
+	double subtract_2_1() { return this->num1 - this->num2; }; //-РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёС‚Р°РЅРёСЏ num1 РёР· num2
+	double divide_1_2() { return this->num1 / this->num2; }; //-РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РґРµР»РµРЅРёСЏ num1 РЅР° num2
+	double divide_2_1() { return this->num2 / this->num1; }; //-РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РґРµР»РµРЅРёСЏ num2 РЅР° num1
 
 protected:
 	double num1, num2;
@@ -50,27 +50,45 @@ int main() {
 
 	while (true) { 
 		bool end = false;
+		/*
 		while (!Calculator.set_num1(num1) || !end) {
-			std::cout << "Введите num1: ";
+			std::cout << "Р’РІРµРґРёС‚Рµ num1: ";
 			std::cin >> num1;
 			if (!Calculator.set_num1(num1)) {
-				std::cout << "Неверный ввод!" << std::endl;
+				std::cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ!" << std::endl;
 			}
 			else {
 				break;
 			}
 		}
 		while (!Calculator.set_num2(num2) || !end) {
-			std::cout << "Введите num2: ";
+			std::cout << "Р’РІРµРґРёС‚Рµ num2: ";
 			std::cin >> num2;
 			if (!Calculator.set_num2(num2)) {
-				std::cout << "Неверный ввод!" << std::endl;
+				std::cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ!" << std::endl;
 			}
 			else {
 				break;
 			}
 		}
-		
+		*/
+		do {
+			std::cout << "Р’РІРµРґРёС‚Рµ num1: ";
+			std::cin >> num1;
+			end = Calculator.set_num1(num1);
+			if (!end) {
+				std::cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ!" << std::endl;
+			}
+		} while (!end);
+		do {
+			std::cout << "Р’РІРµРґРёС‚Рµ num2: ";
+			std::cin >> num2;
+			end = Calculator.set_num2(num2);
+			if (!end) {
+				std::cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ!" << std::endl;
+			}
+		} while (!end);
+
 		if(Calculator.set_num1(num1) && Calculator.set_num2(num2)) {
 				std::cout << "num1 + num2 = " << Calculator.add() << std::endl;
 				std::cout << "num1 * num2 = " << Calculator.multiply() << std::endl;
