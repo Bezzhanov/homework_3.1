@@ -50,6 +50,7 @@ int main() {
 
 	while (true) { 
 		bool end = false;
+		/*
 		while (!Calculator.set_num1(num1) || !end) {
 			std::cout << "Введите num1: ";
 			std::cin >> num1;
@@ -70,7 +71,24 @@ int main() {
 				break;
 			}
 		}
-		
+		*/
+		do {
+			std::cout << "Введите num1: ";
+			std::cin >> num1;
+			end = Calculator.set_num1(num1);
+			if (!end) {
+				std::cout << "Неверный ввод!" << std::endl;
+			}
+		} while (!end);
+		do {
+			std::cout << "Введите num2: ";
+			std::cin >> num2;
+			end = Calculator.set_num2(num2);
+			if (!end) {
+				std::cout << "Неверный ввод!" << std::endl;
+			}
+		} while (!end);
+
 		if(Calculator.set_num1(num1) && Calculator.set_num2(num2)) {
 				std::cout << "num1 + num2 = " << Calculator.add() << std::endl;
 				std::cout << "num1 * num2 = " << Calculator.multiply() << std::endl;
